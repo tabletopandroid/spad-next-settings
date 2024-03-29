@@ -1066,36 +1066,6 @@
     <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#8&amp;16deb1dc&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="MULTIPANEL_BUTTON_AP">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT MASTER" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFFSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT MASTER" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="MULTIPANEL_BUTTON_HDG">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -1591,6 +1561,37 @@
               <Option Key="LINEFACTOR" Value="1638" />
             </Options>
           </Event>
+          <Event BoundTo="MULTIPANEL_BUTTON_AP">
+            <EventDefinitions>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT MASTER" Value="1" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="1" />
+                      <Option Key="ROLLOVER" Value="True" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1854,6 +1855,26 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="YOKE_BUTTON_A1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_PITCH_REF_INC_DN" />
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_VS_VAR_DEC" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="YOKE_BUTTON_A2">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_PITCH_REF_INC_UP" />
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_VS_VAR_INC" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -2097,9 +2118,9 @@
     <Option Key="Elgato.Streamdeck.HeldThreshold" Value="500" />
     <Option Key="Elgato.Streamdeck.HeldFrequency" Value="1" />
   </Options>
-  <ProfileInformation ProfileID="122db0a9-71e3-4f5d-8ff6-fbeba20b6ba3" Version="0.27">
+  <ProfileInformation ProfileID="122db0a9-71e3-4f5d-8ff6-fbeba20b6ba3" Version="0.29">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-03-11T02:47:36.0412343-04:00</LastChanged>
+    <LastChanged>2024-03-13T00:48:51.3847331-04:00</LastChanged>
   </ProfileInformation>
 </Profile>
