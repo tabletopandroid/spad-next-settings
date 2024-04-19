@@ -823,26 +823,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_PANEL_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT PANEL" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:PANEL_LIGHTS_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT PANEL" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:PANEL_LIGHTS_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_BEACON_LIGHTS">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -883,46 +863,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_TAXI_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT TAXI" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_TAXI_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT TAXI" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_TAXI_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_LANDING_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT LANDING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:LANDING_LIGHTS_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT LANDING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:LANDING_LIGHTS_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_PITOT_HEAT">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -939,28 +879,6 @@
                 </EventConditions>
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:PITOT_HEAT_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_COWL">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" Value="100" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:2" Value="100" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:2" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1031,6 +949,66 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="SWITCH_TAXI_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:LandingLightLeftSwitch" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:LandingLightLeftSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_LANDING_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:LandingLightRightSwitch" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:LandingLightRightSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_PANEL_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:NavInstrLightSwitchPct" Value="100" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CabinRedLightSwitch" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:NavInstrLightSwitchPct" Value="12" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CabinRedLightSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_COWL">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CabinFlood1LightSwitch" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CabinFlood2LightSwitch" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CabinFlood1LightSwitch" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CabinFlood2LightSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1061,66 +1039,6 @@
     <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#8&amp;16deb1dc&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="MULTIPANEL_BUTTON_HDG">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT HEADING LOCK" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFFSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT HEADING LOCK" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="MULTIPANEL_BUTTON_NAV">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT NAV1 LOCK" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFFSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT NAV1 LOCK" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="MULTIPANEL_BUTTON_IAS">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -1173,66 +1091,6 @@
               <EventDefinition Trigger="PRESSLONG">
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT MACH HOLD" Value="1" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="MULTIPANEL_BUTTON_ALT">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFFSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="MULTIPANEL_BUTTON_VS">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT VERTICAL HOLD" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFFSHORT">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT VERTICAL HOLD" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1296,43 +1154,6 @@
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
-          </Event>
-          <Event BoundTo="MULTIPANEL_SELECTOR_ALT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionDisplayValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK VAR" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK VAR" Value="100" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMIN" Value="0" />
-                      <Option Key="VALUEMAX" Value="99999" />
-                      <Option Key="ROLLOVER" Value="False" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK VAR" Value="100" ValueOperation="Decrement">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMIN" Value="0" />
-                      <Option Key="VALUEMAX" Value="99999" />
-                      <Option Key="ROLLOVER" Value="False" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="VALUEMIN" Value="0" />
-              <Option Key="VALUEMAX" Value="99999" />
-            </Options>
           </Event>
           <Event BoundTo="MULTIPANEL_SELECTOR_VS">
             <EventDefinitions>
@@ -1560,7 +1381,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LVAR:ApMaster" />
                 </EventConditions>
                 <EventActions>
                   <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
@@ -1568,7 +1389,7 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LVAR:ApMaster" />
                 </EventConditions>
                 <EventActions>
                   <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
@@ -1576,13 +1397,146 @@
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT MASTER" Value="1" ValueOperation="Increment">
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApMaster" Value="1" ValueOperation="Increment">
                     <Options>
                       <Option Key="HASMINMAX" Value="True" />
                       <Option Key="VALUEMAX" Value="1" />
                       <Option Key="ROLLOVER" Value="True" />
                     </Options>
                   </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="MULTIPANEL_SELECTOR_ALT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionDisplayValue TargetDataDefinition="SIMCONNECT:PLANE ALTITUDE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK VAR" Value="100" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMIN" Value="0" />
+                      <Option Key="VALUEMAX" Value="99999" />
+                      <Option Key="ROLLOVER" Value="False" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AUTOPILOT ALTITUDE LOCK VAR" Value="100" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMIN" Value="0" />
+                      <Option Key="VALUEMAX" Value="99999" />
+                      <Option Key="ROLLOVER" Value="False" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="VALUEMIN" Value="0" />
+              <Option Key="VALUEMAX" Value="99999" />
+            </Options>
+          </Event>
+          <Event BoundTo="MULTIPANEL_BUTTON_NAV">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApModePushSwitch" Value="1" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApModePushSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="LVAR:ApMode" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LVAR:ApMode" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFFSHORT">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApMode" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="MULTIPANEL_BUTTON_HDG">
+            <EventDefinitions>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="LVAR:ApMode" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LVAR:ApMode" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFFSHORT">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApMode" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApModePushSwitch" Value="1" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApModePushSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="MULTIPANEL_BUTTON_ALT">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:APAltSwitch" Value="1" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:APAltSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LVAR:ApAltLight" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LVAR:ApAltLight" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFFSHORT">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:ApAltHold" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1623,38 +1577,6 @@
     <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#9&amp;25420c03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="QUADRANT_AXIS_MIDDLE">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
-                    <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION1" Value="True" />
-                      <Option Key="MIN" Value="255" />
-                      <Option Key="MAX" Value="0" />
-                    </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_AXIS_RIGHT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
-                    <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION2" Value="True" />
-                      <Option Key="MIN" Value="255" />
-                      <Option Key="MAX" Value="0" />
-                    </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="YOKE_AXIS_PITCH">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
@@ -1699,30 +1621,6 @@
                     </Options>
                   </EventActionChangeValue>
                   <EventActionChangeValue TargetDataDefinition="LVAR:CARAUX_EXIT_OPEN2" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Toggle Pilot Window</Comment>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_AIRCRAFT_EXIT_FAST">
-                    <Parameter Value="4" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Toggle Main Cabin Door</Comment>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_AIRCRAFT_EXIT_FAST">
-                    <Parameter Value="2" />
-                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1858,19 +1756,60 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="LVAR:Eng1_CarbHeatSwitchPAST" Value="0">
+                  <EventActionCustomAxis TargetDataDefinition="LVAR:Eng1_CarbHeatSwitch" Value="0">
                     <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="16383" />
-                      <Option Key="INVERTAXIS" Value="True" />
-                      <Option Key="RANGETO" Value="-16254" />
                       <Option Key="USEMAPPING" Value="True" />
-                      <Option Key="USETRIGGERVALUE" Value="False" />
+                      <Option Key="USETRIGGERVALUE" Value="True" />
                       <Option Key="MAPTO" Value="100" />
                       <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="MAPFROM" Value="0" />
+                      <Option Key="INVERTAXIS" Value="True" />
                     </Options>
                   </EventActionCustomAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_AXIS_MIDDLE">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventActions>
+                  <EventActionCustomAxis TargetDataDefinition="LVAR:CabinTempControl" Value="0">
+                    <Options>
+                      <Option Key="USEMAPPING" Value="True" />
+                      <Option Key="USETRIGGERVALUE" Value="True" />
+                      <Option Key="MAPTO" Value="100" />
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="INVERTAXIS" Value="True" />
+                    </Options>
+                  </EventActionCustomAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:WindowDefrosterControlKnob" Value="10" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:WindowDefrosterControlKnob" Value="10" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -2120,9 +2059,9 @@
     <Option Key="Elgato.Streamdeck.HeldThreshold" Value="500" />
     <Option Key="Elgato.Streamdeck.HeldFrequency" Value="1" />
   </Options>
-  <ProfileInformation ProfileID="ca7ddd97-686c-4656-9fef-62c2d5fc08e0" Version="0.4">
+  <ProfileInformation ProfileID="ca7ddd97-686c-4656-9fef-62c2d5fc08e0" Version="0.20">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-04-02T18:40:16.749133-04:00</LastChanged>
+    <LastChanged>2024-04-17T06:44:35.3880428-04:00</LastChanged>
   </ProfileInformation>
 </Profile>

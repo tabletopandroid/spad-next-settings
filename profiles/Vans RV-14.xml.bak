@@ -2054,9 +2054,8 @@
     <Option Key="Elgato.Streamdeck.HeldThreshold" Value="500" />
     <Option Key="Elgato.Streamdeck.HeldFrequency" Value="1" />
   </Options>
-  <ProfileInformation ProfileID="555d7b50-1b77-4ced-8a3e-1f951c3cbaf9" Version="0.2">
-    <Author>fergatron</Author>
+  <ProfileInformation ProfileID="422960db-9628-4bf2-818a-01b06aac8f05" Version="0.1">
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-04-10T20:03:12.1642339-04:00</LastChanged>
+    <LastChanged>2024-04-19T06:19:41.0737977-04:00</LastChanged>
   </ProfileInformation>
 </Profile>
