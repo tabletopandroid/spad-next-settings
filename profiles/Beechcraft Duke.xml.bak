@@ -1705,18 +1705,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Toggle Pilot Window</Comment>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_AIRCRAFT_EXIT_FAST">
-                    <Parameter Value="4" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="QUADRANT_LEFT_UPPER">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -1837,6 +1825,21 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_stormWindow" Value="1" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="1" />
+                      <Option Key="ROLLOVER" Value="True" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1899,50 +1902,6 @@
               <EventDefinition Trigger="PRESS">
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:PARKING_BRAKES" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Turn Off High Aux Pumps (F &amp; R)</Comment>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_F1_FUEL_PUMP" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_R1_FUEL_PUMP" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Turn On High Aux Pumps (F &amp; R)</Comment>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_F1_FUEL_PUMP" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_R1_FUEL_PUMP" Value="1" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_RIGHT_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Turn Off Low Aux Pump (F &amp; R)</Comment>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_F2_FUEL_PUMP" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_R2_FUEL_PUMP" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_RIGHT_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Turn On Low Aux Pump (F &amp; R)</Comment>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_F2_FUEL_PUMP" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:SW_R2_FUEL_PUMP" Value="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -2070,9 +2029,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="744468b2-036b-4dec-9237-d0a3c017fe3e" Version="0.18">
+  <ProfileInformation ProfileID="744468b2-036b-4dec-9237-d0a3c017fe3e" Version="0.20">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-05-21T18:49:19.5023379-04:00</LastChanged>
+    <LastChanged>2024-06-23T11:27:37.0575531-04:00</LastChanged>
   </ProfileInformation>
 </Profile>
