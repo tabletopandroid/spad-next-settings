@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
   <Devices>
-    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#8&amp;3098b639&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#9&amp;668e07a&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RADIOPANEL_UPPER_SELECTOR_COM2">
@@ -186,7 +185,9 @@
               </EventDefinition>
               <EventDefinition Trigger="ACTIVATESHORT">
                 <EventActions>
-                  <EventActionCommand CommandName="DIGITMARK" />
+                  <EventActionCommand>
+                    <Parameter Value="DIGITMARK" />
+                  </EventActionCommand>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="ACTIVATELONG">
@@ -488,7 +489,9 @@
               </EventDefinition>
               <EventDefinition Trigger="ACTIVATESHORT">
                 <EventActions>
-                  <EventActionCommand CommandName="DIGITMARK" />
+                  <EventActionCommand>
+                    <Parameter Value="DIGITMARK" />
+                  </EventActionCommand>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="ACTIVATELONG">
@@ -616,18 +619,22 @@
           <EventDefinitions>
             <EventDefinition Trigger="VALUE">
               <EventConditions>
-                <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
+                <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
               </EventConditions>
               <EventActions>
-                <EventActionCommand CommandName="SPAD_neXt.Device_PowerON" />
+                <EventActionCommand>
+                  <Parameter Value="SPAD_neXt.Device_PowerON" />
+                </EventActionCommand>
               </EventActions>
             </EventDefinition>
             <EventDefinition Trigger="VALUE">
               <EventConditions>
-                <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
+                <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
               </EventConditions>
               <EventActions>
-                <EventActionCommand CommandName="SPAD_neXt.Device_PowerOFF" />
+                <EventActionCommand>
+                  <Parameter Value="SPAD_neXt.Device_PowerOFF" />
+                </EventActionCommand>
               </EventActions>
             </EventDefinition>
           </EventDefinitions>
@@ -635,7 +642,7 @@
       </Events>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#8&amp;d342dfe&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#9&amp;34c68b03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="SWITCH_GEAR">
@@ -656,7 +663,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GEAR CENTER POSITION" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GEAR CENTER POSITION" />
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="OFF" />
@@ -664,7 +671,7 @@
               </EventDefinition>
               <EventDefinition Trigger="VALUE" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:GEAR CENTER POSITION" />
+                  <EventCondition ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:GEAR CENTER POSITION" />
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="GREEN" />
@@ -684,7 +691,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GEAR RIGHT POSITION" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GEAR RIGHT POSITION" />
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="OFF" />
@@ -692,7 +699,7 @@
               </EventDefinition>
               <EventDefinition Trigger="VALUE" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:GEAR RIGHT POSITION" />
+                  <EventCondition ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:GEAR RIGHT POSITION" />
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="GREEN" />
@@ -712,7 +719,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GEAR LEFT POSITION" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GEAR LEFT POSITION" />
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="OFF" />
@@ -720,7 +727,7 @@
               </EventDefinition>
               <EventDefinition Trigger="VALUE" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:GEAR LEFT POSITION" />
+                  <EventCondition ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:GEAR LEFT POSITION" />
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="GREEN" />
@@ -946,7 +953,7 @@
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFF">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
                 </EventConditions>
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" Value="100" />
@@ -959,7 +966,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
                 </EventConditions>
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_alternatorSwitch" Value="1" />
@@ -968,40 +975,11 @@
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFF">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
                 </EventConditions>
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_standbyAlternatorSwitch" Value="0" />
                   <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_alternatorSwitch" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_ENGINE">
-            <EventDefinitions>
-              <EventDefinition Trigger="SEL_OFF_VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_IgnitionPosition_1" Value="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="SEL_R_VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_IgnitionPosition_1" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="SEL_L_VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_IgnitionPosition_1" Value="2" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="SEL_ALL_VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_IgnitionPosition_1" Value="3" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="SEL_START_VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_IgnitionPosition_1" Value="4" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1028,6 +1006,35 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="SWITCH_ENGINE">
+            <EventDefinitions>
+              <EventDefinition Trigger="SEL_OFF_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_R_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_RIGHT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_L_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_LEFT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_ALL_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_BOTH" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_START_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_START" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1036,18 +1043,22 @@
           <EventDefinitions>
             <EventDefinition Trigger="VALUE">
               <EventConditions>
-                <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:ELECTRICAL MASTER BATTERY" />
+                <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:ELECTRICAL MASTER BATTERY" />
               </EventConditions>
               <EventActions>
-                <EventActionCommand CommandName="SPAD_neXt.Device_PowerON" />
+                <EventActionCommand>
+                  <Parameter Value="SPAD_neXt.Device_PowerON" />
+                </EventActionCommand>
               </EventActions>
             </EventDefinition>
             <EventDefinition Trigger="VALUE">
               <EventConditions>
-                <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:ELECTRICAL MASTER BATTERY" />
+                <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:ELECTRICAL MASTER BATTERY" />
               </EventConditions>
               <EventActions>
-                <EventActionCommand CommandName="SPAD_neXt.Device_PowerOFF" />
+                <EventActionCommand>
+                  <Parameter Value="SPAD_neXt.Device_PowerOFF" />
+                </EventActionCommand>
               </EventActions>
             </EventDefinition>
           </EventDefinitions>
@@ -1055,7 +1066,7 @@
       </Events>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#8&amp;16deb1dc&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#9&amp;2cac94ec&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="MULTIPANEL_BUTTON_HDG">
@@ -1067,18 +1078,20 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1097,18 +1110,20 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1127,34 +1142,39 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT AIRSPEED HOLD" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT AIRSPEED HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MACH HOLD" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MACH HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_LONG_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT AIRSPEED HOLD" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT AIRSPEED HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MACH HOLD" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MACH HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_LONG_ON" Mode="FLASHMODE_SLOW" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                    <Parameter1 Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1183,18 +1203,20 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1213,18 +1235,20 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1243,18 +1267,20 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1273,18 +1299,20 @@
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFFSHORT">
@@ -1557,18 +1585,20 @@
             <EventDefinitions>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_OFF" />
+                  <EventActionLED />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="BUTTONLIGHT" IsFinal="true">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionButtonLight ButtonLight="BUTTON_SHORT_ON" />
+                  <EventActionLED>
+                    <Parameter Value="1" />
+                  </EventActionLED>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
@@ -1590,20 +1620,24 @@
       <Events>
         <Event BoundTo="CONFIGURE_PANEL_STATUS">
           <EventDefinitions>
-            <EventDefinition Trigger="DEVICE_ON">
+            <EventDefinition Trigger="VALUE">
               <EventConditions>
-                <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
+                <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
               </EventConditions>
               <EventActions>
-                <EventActionCommand CommandName="SPAD_neXt.Device_PowerON" />
+                <EventActionCommand>
+                  <Parameter Value="SPAD_neXt.Device_PowerON" />
+                </EventActionCommand>
               </EventActions>
             </EventDefinition>
-            <EventDefinition Trigger="DEVICE_OFF">
+            <EventDefinition Trigger="VALUE">
               <EventConditions>
-                <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
+                <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
               </EventConditions>
               <EventActions>
-                <EventActionCommand CommandName="SPAD_neXt.Device_PowerOFF" />
+                <EventActionCommand>
+                  <Parameter Value="SPAD_neXt.Device_PowerOFF" />
+                </EventActionCommand>
               </EventActions>
             </EventDefinition>
           </EventDefinitions>
@@ -1617,7 +1651,7 @@
       </Options>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#9&amp;25420c03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#a&amp;13ec202c&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="YOKE_AXIS_PITCH">
@@ -1724,7 +1758,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#9&amp;17348247&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;1b0109ef&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="QUADRANT_AXIS_LEFT">
@@ -1808,7 +1842,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0763" DevicePath="\\?\hid#vid_06a3&amp;pid_0763#8&amp;364a7ef0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0763" DevicePath="\\?\hid#vid_06a3&amp;pid_0763#9&amp;23805f65&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RZ_AXIS">
@@ -1870,7 +1904,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LVAR:TABLET_BTN_BAGAGE_DOOR" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LVAR:TABLET_BTN_BAGAGE_DOOR" />
                   <EventCondition ConditionComparator="Unequal" ConditionTargetValue="100" ConditionValueSource="LVAR:CARAUX_EXIT_OPEN2" />
                 </EventConditions>
                 <EventActions>
@@ -1895,16 +1929,8 @@
     </Device>
   </Devices>
   <Options>
-    <Option Key="Elgato.Streamdeck.Brightness" Value="100" />
-    <Option Key="Elgato.Streamdeck.DarkenDevice" Value="True" />
     <Option Key="Saitek.BIP.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.BIP.Brightness" Value="50" />
-    <Option Key="Saitek.BIP.Priority.VALUEOFF" Value="0" />
-    <Option Key="Saitek.BIP.Priority.VALUEGREEN" Value="1" />
-    <Option Key="Saitek.BIP.Priority.VALUEYELLOW" Value="2" />
-    <Option Key="Saitek.BIP.Priority.VALUERED" Value="4" />
-    <Option Key="Saitek.BIP.Priority.VALUEREDBLINK" Value="3" />
-    <Option Key="Saitek.FIP.BindLightToMode" Value="False" />
     <Option Key="Saitek.FIP.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.FIP.DefaultPagingButtons" Value="True" />
     <Option Key="Saitek.FIP.PagingButtonsOn" Value="True" />
@@ -1916,12 +1942,10 @@
     <Option Key="Ultimarc.PacDrive.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
-    <Option Key="Elgato.Streamdeck.HeldThreshold" Value="500" />
-    <Option Key="Elgato.Streamdeck.HeldFrequency" Value="1" />
   </Options>
-  <ProfileInformation ProfileID="a1d49b39-cdc8-443b-8008-72b01a8617d5" Version="0.15">
+  <ProfileInformation ProfileID="a1d49b39-cdc8-443b-8008-72b01a8617d5" Version="0.17">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-04-08T22:30:11.4961386-04:00</LastChanged>
+    <LastChanged>2024-11-25T22:31:52.2603175-05:00</LastChanged>
   </ProfileInformation>
 </Profile>
