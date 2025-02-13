@@ -642,7 +642,7 @@
       </Events>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#9&amp;1e9f2246&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#9&amp;34c68b03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="SWITCH_GEAR">
@@ -743,26 +743,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_AVIONICS_MASTER">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AVIONICS MASTER SWITCH" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AVIONICS MASTER SWITCH" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_MASTER_BAT">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -834,32 +814,6 @@
               <EventDefinition Trigger="SEL_START_VALUEON">
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO_START" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_FUEL_PUMP">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:2" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:3" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:4" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:2" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:3" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:4" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -964,26 +918,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_LANDING_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT LANDING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:LANDING_LIGHTS_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT LANDING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:LANDING_LIGHTS_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_PITOT_HEAT">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -1043,6 +977,54 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="SWITCH_AVIONICS_MASTER">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_AVIONICS_MASTER_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_AVIONICS_MASTER_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_FUEL_PUMP">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:SWITCH_P1_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:SWITCH_P1_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_LANDING_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:LANDING_LIGHTS_ON">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:LANDING_LIGHTS_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1074,7 +1056,7 @@
       </Events>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#9&amp;3503cd0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#9&amp;2cac94ec&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="MULTIPANEL_BUTTON_HDG">
@@ -1659,7 +1641,7 @@
       </Options>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#a&amp;1593da8c&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#a&amp;2bdc8890&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="YOKE_AXIS_PITCH">
@@ -1867,7 +1849,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;8ae9d44&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;2cb84cd3&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="QUADRANT_AXIS_LEFT">
@@ -1977,7 +1959,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0763" DevicePath="\\?\hid#vid_06a3&amp;pid_0763#9&amp;363a100a&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0763" DevicePath="\\?\hid#vid_06a3&amp;pid_0763#9&amp;23805f65&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RZ_AXIS">
@@ -2068,7 +2050,6 @@
     <Option Key="Saitek.BIP.Brightness" Value="50" />
     <Option Key="Saitek.FIP.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.FIP.DefaultPagingButtons" Value="True" />
-    <Option Key="Saitek.FIP.PagingButtonsOn" Value="True" />
     <Option Key="Saitek.RadioPanel.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.SwitchPanel.RaiseOnFirst" Value="False" />
     <Option Key="Saitek.SwitchPanel.SwapRL" Value="True" />
@@ -2078,9 +2059,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="1b1e42c8-0969-4bd4-869d-479c87620d6f" Version="0.3">
+  <ProfileInformation ProfileID="1b1e42c8-0969-4bd4-869d-479c87620d6f" Version="0.9">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-07-05T04:29:10.3973183-04:00</LastChanged>
+    <LastChanged>2025-02-12T22:10:12.4346122-05:00</LastChanged>
   </ProfileInformation>
 </Profile>

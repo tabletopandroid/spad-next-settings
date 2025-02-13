@@ -645,20 +645,6 @@
     <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#9&amp;34c68b03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="SWITCH_GEAR">
-            <EventDefinitions>
-              <EventDefinition Trigger="GEAR_DOWN">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GEAR HANDLE POSITION" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="GEAR_UP">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GEAR HANDLE POSITION" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="GEAR_STATE_NOSE">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE" IsFinal="true">
@@ -1025,6 +1011,20 @@
                   <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_PROPELLER_DEICE" />
                   <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_STRUCTURAL_DEICE" />
                   <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_TOGGLE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_GEAR">
+            <EventDefinitions>
+              <EventDefinition Trigger="GEAR_DOWN">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GEAR HANDLE POSITION" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="GEAR_UP">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GEAR HANDLE POSITION" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1517,42 +1517,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="MULTIPANEL_FLAPS_UP">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:FLAPS_DECR" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSLONG">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:FLAPS_UP" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="VALUEMIN" Value="0" />
-              <Option Key="VALUEMAX" Value="16383" />
-            </Options>
-          </Event>
-          <Event BoundTo="MULTIPANEL_FLAPS_DOWN">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:FLAPS_INCR" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSLONG">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:FLAPS_DOWN" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="VALUEMIN" Value="0" />
-              <Option Key="VALUEMAX" Value="16383" />
-            </Options>
-          </Event>
           <Event BoundTo="MULTIPANEL_PITCHTRIM">
             <EventDefinitions>
               <EventDefinition Trigger="NOSEDOWN">
@@ -1607,6 +1571,42 @@
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
+          </Event>
+          <Event BoundTo="MULTIPANEL_FLAPS_UP">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="1" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="2" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="VALUEMIN" Value="0" />
+              <Option Key="VALUEMAX" Value="16383" />
+            </Options>
+          </Event>
+          <Event BoundTo="MULTIPANEL_FLAPS_DOWN">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="1" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="2" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="VALUEMIN" Value="0" />
+              <Option Key="VALUEMAX" Value="16383" />
+            </Options>
           </Event>
         </Events>
         <Extensions />
@@ -1751,6 +1751,38 @@
               <EventDefinition Trigger="VALUE">
                 <EventActions>
                   <EventActionRangedAxis ConfigID="LEVER_PROPPITCH">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION2" Value="True" />
+                      <Option Key="MIN" Value="255" />
+                      <Option Key="MAX" Value="0" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_AXIS_MIDDLE">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="MIN" Value="255" />
+                      <Option Key="MAX" Value="0" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_AXIS_RIGHT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
                     <Options>
                       <Option Key="USERAWVALUE" Value="True" />
                       <Option Key="OPTION2" Value="True" />
@@ -1951,9 +1983,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="d2030ae2-3a7c-4539-bde0-0883d36e3032" Version="0.2">
+  <ProfileInformation ProfileID="d2030ae2-3a7c-4539-bde0-0883d36e3032" Version="0.5">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-01-10T19:30:55.4204438-05:00</LastChanged>
+    <LastChanged>2025-02-02T10:10:12.2136718-05:00</LastChanged>
   </ProfileInformation>
 </Profile>

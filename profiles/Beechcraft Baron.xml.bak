@@ -789,86 +789,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_BEACON_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT BEACON" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_BEACON_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT BEACON" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_BEACON_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_NAV_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT NAV" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_NAV_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT NAV" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_NAV_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_STROBE_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT STROBE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:STROBES_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT STROBE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:STROBES_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_TAXI_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT TAXI" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_TAXI_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT TAXI" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_TAXI_LIGHTS" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_LANDING_LIGHTS">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -1025,6 +945,62 @@
               <EventDefinition Trigger="GEAR_DOWN">
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="B:LANDING_GEAR" Value="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_BEACON_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_BEACON_1" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_BEACON_1" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_NAV_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_NAV_1" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_NAV_1" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_STROBE_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_STROBE_1" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_STROBE_1" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_TAXI_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_TAXI_1" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_TAXI_1" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1576,10 +1552,10 @@
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="1" ValueOperation="Decrement">
+                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="8192" ValueOperation="Decrement">
                     <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="2" />
+                      <Option Key="HASMINMAX" Value="False" />
+                      <Option Key="VALUEMAX" Value="8193" />
                     </Options>
                   </EventActionChangeValue>
                 </EventActions>
@@ -1594,10 +1570,10 @@
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="1" ValueOperation="Increment">
+                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="8192" ValueOperation="Increment">
                     <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="2" />
+                      <Option Key="HASMINMAX" Value="False" />
+                      <Option Key="VALUEMAX" Value="16385" />
                     </Options>
                   </EventActionChangeValue>
                 </EventActions>
@@ -1983,9 +1959,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="d2030ae2-3a7c-4539-bde0-0883d36e3032" Version="0.6">
+  <ProfileInformation ProfileID="48905164-fe25-49bf-99eb-5c8e5309f855" Version="0.3">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-02-02T10:11:58.280797-05:00</LastChanged>
+    <LastChanged>2025-02-04T18:58:10.627415-05:00</LastChanged>
   </ProfileInformation>
 </Profile>
