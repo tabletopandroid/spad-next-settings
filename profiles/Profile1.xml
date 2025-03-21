@@ -1,8 +1,0 @@
-<Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
-  <Devices />
-  <Options />
-  <ProfileInformation ProfileID="5999aeb2-4375-4558-9d23-44f9d07d2a7e" Version="0.1">
-    <Description />
-    <LastChanged>2025-03-08T22:36:15.4372998-05:00</LastChanged>
-  </ProfileInformation>
-</Profile>
