@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
   <Devices>
     <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#8&amp;3098b639&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
@@ -1660,85 +1660,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_RIGHT_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:TABLET_BTN_BAGAGE_DOOR" Value="0">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="False" />
-                      <Option Key="VALUEMAX" Value="1" />
-                      <Option Key="ROLLOVER" Value="True" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:CARAUX_EXIT_OPEN2" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Toggle Pilot Window</Comment>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_AIRCRAFT_EXIT_FAST">
-                    <Parameter Value="4" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Toggle Main Cabin Door</Comment>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_AIRCRAFT_EXIT_FAST">
-                    <Parameter Value="2" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_RIGHT_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:CARAUX_EXIT_OPEN2" Value="100" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="100" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:TABLET_BTN_BAGAGE_DOOR" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_AIRCRAFT_EXIT_FAST">
-                    <Parameter Value="3" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_LEFT_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Toggle Prop Sync</Comment>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:PROP_SYNC_ACTIVE_CAR" Value="1" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="1" />
-                      <Option Key="ROLLOVER" Value="True" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_PROPELLER_SYNC" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="QUADRANT_LEFT_REVERSE">
             <EventDefinitions>
               <EventDefinition Trigger="HELD">
@@ -1937,6 +1858,22 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="QUADRANT_AXIS_MIDDLE">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_PROPPITCH">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="MIN" Value="255" />
+                      <Option Key="MAX" Value="0" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -2054,8 +1991,9 @@
     <Option Key="Elgato.Streamdeck.HeldThreshold" Value="500" />
     <Option Key="Elgato.Streamdeck.HeldFrequency" Value="1" />
   </Options>
-  <ProfileInformation ProfileID="422960db-9628-4bf2-818a-01b06aac8f05" Version="0.1">
+  <ProfileInformation ProfileID="422960db-9628-4bf2-818a-01b06aac8f05" Version="0.2">
+    <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-04-19T06:19:41.0737977-04:00</LastChanged>
+    <LastChanged>2024-04-19T07:53:06.6259587-04:00</LastChanged>
   </ProfileInformation>
 </Profile>

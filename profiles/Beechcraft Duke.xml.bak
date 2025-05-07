@@ -1,6 +1,6 @@
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
   <Devices>
-    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#8&amp;3098b639&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#9&amp;668e07a&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RADIOPANEL_UPPER_SELECTOR_COM2">
@@ -642,7 +642,7 @@
       </Events>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#8&amp;d342dfe&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D67" DevicePath="\\?\hid#vid_06a3&amp;pid_0d67#9&amp;34c68b03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="SWITCH_GEAR">
@@ -952,30 +952,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_COWL">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="1" />
-                  <EventActionDelay Delay="15000" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="2" />
-                  <EventActionDelay Delay="15000" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_NAV_LIGHTS">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -1038,6 +1014,34 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="SWITCH_COWL">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="1" />
+                  <EventActionDelay Delay="15000" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="2" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="2" />
+                  <EventActionDelay Delay="15000" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1069,7 +1073,7 @@
       </Events>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#8&amp;16deb1dc&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D06" DevicePath="\\?\hid#vid_06a3&amp;pid_0d06#9&amp;2cac94ec&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="MULTIPANEL_BUTTON_HDG">
@@ -1654,7 +1658,7 @@
       </Options>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#9&amp;25420c03&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#a&amp;2bdc8890&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="QUADRANT_AXIS_LEFT">
@@ -1780,21 +1784,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_RIGHT_UPPER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_CabinDoor" Value="1" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="1" />
-                      <Option Key="ROLLOVER" Value="True" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="QUADRANT_RIGHT_LOWER">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -1810,32 +1799,11 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
+          <Event BoundTo="YOKE_BUTTON_B2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_CabinTable" Value="1" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="1" />
-                      <Option Key="ROLLOVER" Value="True" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_stormWindow" Value="1" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="1" />
-                      <Option Key="ROLLOVER" Value="True" />
-                    </Options>
-                  </EventActionChangeValue>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_PITCH_REF_INC_DN" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1846,7 +1814,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#9&amp;17348247&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;2cb84cd3&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="QUADRANT_AXIS_LEFT">
@@ -1928,7 +1896,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0763" DevicePath="\\?\hid#vid_06a3&amp;pid_0763#8&amp;364a7ef0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0763" DevicePath="\\?\hid#vid_06a3&amp;pid_0763#9&amp;23805f65&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RZ_AXIS">
@@ -2019,7 +1987,6 @@
     <Option Key="Saitek.BIP.Brightness" Value="50" />
     <Option Key="Saitek.FIP.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.FIP.DefaultPagingButtons" Value="True" />
-    <Option Key="Saitek.FIP.PagingButtonsOn" Value="True" />
     <Option Key="Saitek.RadioPanel.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.SwitchPanel.RaiseOnFirst" Value="False" />
     <Option Key="Saitek.SwitchPanel.SwapRL" Value="True" />
@@ -2029,9 +1996,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="744468b2-036b-4dec-9237-d0a3c017fe3e" Version="0.20">
+  <ProfileInformation ProfileID="744468b2-036b-4dec-9237-d0a3c017fe3e" Version="0.23">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2024-06-23T11:27:37.0575531-04:00</LastChanged>
+    <LastChanged>2025-04-25T22:27:52.8779035-04:00</LastChanged>
   </ProfileInformation>
 </Profile>
