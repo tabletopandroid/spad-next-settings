@@ -769,26 +769,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_PANEL_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT PANEL" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:PANEL_LIGHTS_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT PANEL" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:PANEL_LIGHTS_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_LANDING_LIGHTS">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -851,50 +831,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_MASTER_ALT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_alternatorSwitch" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_standbyAlternatorSwitch" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_standbyAlternatorSwitch" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_alternatorSwitch" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_FUEL_PUMP">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_1" Value="2" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_ENGINE">
             <EventDefinitions>
               <EventDefinition Trigger="SEL_OFF_VALUEON">
@@ -920,31 +856,6 @@
               <EventDefinition Trigger="SEL_START_VALUEON">
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_START" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_DEICE">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_PROPELLER_DEICE" />
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_STRUCTURAL_DEICE" />
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_TOGGLE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_GEAR">
-            <EventDefinitions>
-              <EventDefinition Trigger="GEAR_UP">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:LANDING_GEAR" Value="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="GEAR_DOWN">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:LANDING_GEAR" Value="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1001,6 +912,97 @@
               <EventDefinition Trigger="VALUEOFF">
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="B:LIGHTING_TAXI_1" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_MASTER_ALT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_1_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_2_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_1_Set" />
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_2_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_DEICE">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:DEICE_AIRFRAME_1_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:DEICE_Switch_Windshield" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:DEICE_Propeller_1" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:DEICE_AIRFRAME_1_Set" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:DEICE_Switch_Windshield" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:DEICE_Propeller_1" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_PANEL_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_GLARESHIELD_1" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_GLARESHIELD_1_POWER_SETTING" Value="5" />
+                  <EventActionControl TargetDataDefinition="B:LIGHTING_PANEL_1_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_GLARESHIELD_1" Value="0" />
+                  <EventActionControl TargetDataDefinition="B:LIGHTING_PANEL_1_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_GEAR">
+            <EventDefinitions>
+              <EventDefinition Trigger="GEAR_UP">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:LANDING_GEAR_GEAR_Set" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="GEAR_DOWN">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:LANDING_GEAR_GEAR_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_FUEL_PUMP">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_1" Value="2" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_2" Value="2" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_1" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_2" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1548,16 +1550,13 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="MULTIPANEL_FLAPS_UP">
+          <Event BoundTo="MULTIPANEL_FLAPS_DOWN">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="8192" ValueOperation="Decrement">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="False" />
-                      <Option Key="VALUEMAX" Value="8193" />
-                    </Options>
-                  </EventActionChangeValue>
+                  <EventActionControl TargetDataDefinition="B:HANDLING_FLAPS_Inc">
+                    <Parameter Value="8192" />
+                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1566,16 +1565,13 @@
               <Option Key="VALUEMAX" Value="16383" />
             </Options>
           </Event>
-          <Event BoundTo="MULTIPANEL_FLAPS_DOWN">
+          <Event BoundTo="MULTIPANEL_FLAPS_UP">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:HANDLING_FLAPS" Value="8192" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="False" />
-                      <Option Key="VALUEMAX" Value="16385" />
-                    </Options>
-                  </EventActionChangeValue>
+                  <EventActionControl TargetDataDefinition="B:HANDLING_FLAPS_Dec">
+                    <Parameter Value="8192" />
+                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1738,18 +1734,113 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="QUADRANT_LEFT_UPPER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="B:BARON_G58_EXTRAS_WINDOW_GLASS" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:BARON_G58_EXTRAS_WINDOW_GLASS_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="B:BARON_G58_EXTRAS_WINDOW_GLASS" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:BARON_G58_EXTRAS_WINDOW_GLASS_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_LEFT_LOWER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <Comment>OPEN DOOR</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="B:AIRCRAFT_DOOR_3" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AIRCRAFT_DOOR_3_Set">
+                    <Parameter Value="100" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <Comment>CLOSE DOOR</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="100" ConditionValueSource="B:AIRCRAFT_DOOR_3" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AIRCRAFT_DOOR_3_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <Comment>OPEN 2ND DOOR</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="B:AIRCRAFT_DOOR_2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AIRCRAFT_DOOR_2_Set">
+                    <Parameter Value="100" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <Comment>CLOSE 2ND DOOR</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="100" ConditionValueSource="B:AIRCRAFT_DOOR_2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AIRCRAFT_DOOR_2_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <Comment>OPEN 2ND DOOR</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="B:AIRCRAFT_DOOR_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AIRCRAFT_DOOR_1_Set">
+                    <Parameter Value="100" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <Comment>CLOSE 2ND DOOR</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="100" ConditionValueSource="B:AIRCRAFT_DOOR_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AIRCRAFT_DOOR_1_Set" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="QUADRANT_AXIS_MIDDLE">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
+                  <EventActionCustomAxis TargetDataDefinition="LVAR:BKSQ_MIXTURELEVERPOSITION_1" Value="0">
                     <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION1" Value="True" />
-                      <Option Key="MIN" Value="255" />
-                      <Option Key="MAX" Value="0" />
+                      <Option Key="ALWAYSACTIVE" Value="False" />
+                      <Option Key="RANGETO" Value="16383" />
+                      <Option Key="RANGEFROM" Value="-16383" />
+                      <Option Key="USETRIGGERVALUE" Value="True" />
+                      <Option Key="INVERTAXIS" Value="True" />
                     </Options>
-                  </EventActionRangedAxis>
+                  </EventActionCustomAxis>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1758,14 +1849,15 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
+                  <EventActionCustomAxis TargetDataDefinition="LVAR:BKSQ_MIXTURELEVERPOSITION_2" Value="0">
                     <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION2" Value="True" />
-                      <Option Key="MIN" Value="255" />
-                      <Option Key="MAX" Value="0" />
+                      <Option Key="ALWAYSACTIVE" Value="False" />
+                      <Option Key="RANGETO" Value="16383" />
+                      <Option Key="RANGEFROM" Value="-16383" />
+                      <Option Key="USETRIGGERVALUE" Value="True" />
+                      <Option Key="INVERTAXIS" Value="True" />
                     </Options>
-                  </EventActionRangedAxis>
+                  </EventActionCustomAxis>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1949,7 +2041,6 @@
     <Option Key="Saitek.BIP.Brightness" Value="50" />
     <Option Key="Saitek.FIP.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.FIP.DefaultPagingButtons" Value="True" />
-    <Option Key="Saitek.FIP.PagingButtonsOn" Value="True" />
     <Option Key="Saitek.RadioPanel.EnableVirtualPower" Value="True" />
     <Option Key="Saitek.SwitchPanel.RaiseOnFirst" Value="False" />
     <Option Key="Saitek.SwitchPanel.SwapRL" Value="True" />
@@ -1959,9 +2050,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="48905164-fe25-49bf-99eb-5c8e5309f855" Version="0.3">
+  <ProfileInformation ProfileID="48905164-fe25-49bf-99eb-5c8e5309f855" Version="0.19">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-02-04T18:58:10.627415-05:00</LastChanged>
+    <LastChanged>2025-05-15T23:45:56.1010209-04:00</LastChanged>
   </ProfileInformation>
 </Profile>

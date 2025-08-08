@@ -763,32 +763,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_MASTER_ALT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:2" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:3" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:4" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:2" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:3" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:4" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_ENGINE">
             <EventDefinitions>
               <EventDefinition Trigger="SEL_OFF_VALUEON">
@@ -900,23 +874,6 @@
                 </EventConditions>
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:PITOT_HEAT_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_DEICE">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_STRUCTURAL_DEICE" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:LIGHTING_WING_1" Value="1" />
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_STRUCTURAL_DEICE" />
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_OFF" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1038,6 +995,26 @@
                   <EventActionDelay Delay="15000" />
                   <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
                   <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_MASTER_ALT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_1_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_2_Set">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_1_Set" />
+                  <EventActionControl TargetDataDefinition="B:ELECTRICAL_ALTERNATOR_2_Set" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1881,6 +1858,50 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_UPPER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="1" />
+                  <EventActionDelay Delay="15000" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_LOWER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="2" />
+                  <EventActionDelay Delay="15000" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_L" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_RIGHT_LOWER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="2" />
+                  <EventActionDelay Delay="15000" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_RIGHT_UPPER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="1" />
+                  <EventActionDelay Delay="15000" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_cowlFlapSwitch_R" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1987,9 +2008,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="744468b2-036b-4dec-9237-d0a3c017fe3e" Version="0.24">
+  <ProfileInformation ProfileID="744468b2-036b-4dec-9237-d0a3c017fe3e" Version="0.33">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-04-25T22:34:40.6952713-04:00</LastChanged>
+    <LastChanged>2025-05-10T18:19:02.4712081-04:00</LastChanged>
   </ProfileInformation>
 </Profile>

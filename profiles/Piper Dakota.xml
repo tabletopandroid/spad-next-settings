@@ -743,31 +743,62 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_ENGINE">
+          <Event BoundTo="SWITCH_AVIONICS_MASTER">
             <EventDefinitions>
-              <EventDefinition Trigger="SEL_OFF_VALUEON">
+              <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO_OFF" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AVIONICS MASTER SWITCH" Value="1" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="SEL_R_VALUEON">
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AVIONICS MASTER SWITCH" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO_RIGHT" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:AVIONICS MASTER SWITCH" Value="0" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="SEL_L_VALUEON">
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_MASTER_BAT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:ELECTRICAL MASTER BATTERY" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO_LEFT" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:ELECTRICAL MASTER BATTERY" Value="1" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="SEL_ALL_VALUEON">
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:ELECTRICAL MASTER BATTERY" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO_BOTH" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:ELECTRICAL MASTER BATTERY" Value="0" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="SEL_START_VALUEON">
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_PANEL_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT PANEL" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO_START" />
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PANEL_LIGHTS_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT PANEL" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PANEL_LIGHTS_OFF" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -896,6 +927,15 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
                 <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:2" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
                   <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
                 </EventConditions>
                 <EventActions>
@@ -903,13 +943,77 @@
                   <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:2" Value="100" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_MASTER_ALT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:RECIP ENG COWL FLAP POSITION:2" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_alternatorSwitch" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_standbyAlternatorSwitch" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_standbyAlternatorSwitch" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:BKSQ_alternatorSwitch" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_FUEL_PUMP">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_1" Value="2" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_FUEL_Switch_Pump_1" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG FUEL PUMP SWITCH:1" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="SWITCH_ENGINE">
+            <EventDefinitions>
+              <EventDefinition Trigger="SEL_OFF_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_R_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_RIGHT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_L_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_LEFT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_ALL_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_BOTH" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SEL_START_VALUEON">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MAGNETO1_START" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -918,97 +1022,9 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
                 <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_PROPELLER_DEICE" />
                   <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_STRUCTURAL_DEICE" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:LIGHTING_WING_1" Value="1" />
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_STRUCTURAL_DEICE" />
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_PANEL_LIGHTS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_PANEL_1" Value="100" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_POTENTIOMETER_7" Value="100" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_PEDESTRAL_1" Value="100" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_GLARESHIELD_1" Value="100" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_CABIN_1" Value="20" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_CABIN_2" Value="20" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_PANEL_1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_POTENTIOMETER_7" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_PEDESTRAL_1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_GLARESHIELD_1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_CABIN_1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="B:LIGHTING_CABIN_2" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_MASTER_ALT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_AVIONICS_MASTER">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:ELECTRICAL_LINE_BUS_1_TO_AVIONICS_BUS_1" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="B:ELECTRICAL_LINE_BUS_2_TO_AVIONICS_BUS_2" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:ELECTRICAL_LINE_BUS_1_TO_AVIONICS_BUS_1" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="B:ELECTRICAL_LINE_BUS_2_TO_AVIONICS_BUS_2" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_MASTER_BAT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MASTER_BATTERY_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:MASTER_BATTERY_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="SWITCH_FUEL_PUMP">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:FUEL_PUMP_1" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:FUEL_PUMP_1" Value="0" />
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:WINDSHIELD_DEICE_TOGGLE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1629,7 +1645,7 @@
       </Options>
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#a&amp;2bdc8890&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0BAC" DevicePath="\\?\hid#vid_06a3&amp;pid_0bac#a&amp;13ec202c&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="YOKE_AXIS_PITCH">
@@ -1680,58 +1696,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="YOKE_BUTTON_C2">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:AUX_AUTOPILOT_BANK_TARGET" Value="10" ValueOperation="Decrement">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMIN" Value="-30" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:RK" Value="1" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="3" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:XMLVAR_AP2KNOBLR" Value="1" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="6" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="YOKE_BUTTON_C1">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:AUX_AUTOPILOT_BANK_TARGET" Value="10" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="30" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:RK" Value="1" ValueOperation="Decrement">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMIN" Value="-3" />
-                    </Options>
-                  </EventActionChangeValue>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:XMLVAR_AP2KNOBLR" Value="1" ValueOperation="Decrement">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="3" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="YOKE_BUTTON_A1">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -1752,72 +1716,32 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_RIGHT_UPPER">
+          <Event BoundTo="YOKE_BUTTON_C2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:AIRCRAFT_DOOR_WINDOW_PILOT" Value="1" ValueOperation="Increment">
+                  <EventActionChangeValue TargetDataDefinition="LVAR:HANDLING_AileronsTrim" Value="225" ValueOperation="Increment">
                     <Options>
                       <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="ROLLOVER" Value="True" />
-                      <Option Key="VALUEMAX" Value="1" />
+                      <Option Key="VALUEMIN" Value="-5" />
+                      <Option Key="VALUEMAX" Value="16384" />
                     </Options>
                   </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_RIGHT_LOWER">
+          <Event BoundTo="YOKE_BUTTON_C1">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="B:AIRCRAFT_DOOR_WINDOW" Value="1" ValueOperation="Increment">
+                  <EventActionChangeValue TargetDataDefinition="LVAR:HANDLING_AileronsTrim" Value="225" ValueOperation="Decrement">
                     <Options>
                       <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="1" />
-                      <Option Key="ROLLOVER" Value="True" />
+                      <Option Key="VALUEMIN" Value="-16384" />
+                      <Option Key="VALUEMAX" Value="-5" />
                     </Options>
                   </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_AXIS_LEFT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <Comment>Cut Off</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER_Set" Value="2">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-9187" />
-                      <Option Key="RANGETO" Value="-16383" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <Comment>Low</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER_Set" Value="1">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGETO" Value="-4690" />
-                      <Option Key="RANGEFROM" Value="5204" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <Comment>High</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER_Set" Value="0">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGETO" Value="9058" />
-                      <Option Key="RANGEFROM" Value="16383" />
-                    </Options>
-                  </EventActionCustomAxis>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1828,9 +1752,25 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;2cb84cd3&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;1b0109ef&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
+          <Event BoundTo="QUADRANT_AXIS_LEFT">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="IDLE" Value="255" />
+                      <Option Key="MAX" Value="0" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="QUADRANT_LEFT_LOWER">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -1860,7 +1800,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_PROPPITCH">
+                  <EventActionRangedAxis ConfigID="LEVER_MIXTURE">
                     <Options>
                       <Option Key="USERAWVALUE" Value="True" />
                       <Option Key="OPTION1" Value="True" />
@@ -1872,36 +1812,20 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_AXIS_LEFT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_AXIS" JoystickNumber="1" JoystickTarget="54" JoystickMode="RESPONSECURVE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="QUADRANT_AXIS_MIDDLE">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
+                  <EventActionRangedAxis ConfigID="LEVER_PROPPITCH">
                     <Options>
                       <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="OPTION2" Value="False" />
                       <Option Key="IDLE" Value="255" />
                       <Option Key="MAX" Value="0" />
+                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="MIN" Value="255" />
                     </Options>
                   </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_REVERSE">
-            <EventDefinitions>
-              <EventDefinition Trigger="HELD">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_1_Set" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1997,51 +1921,6 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x1234" ProductID="0xBEAD" DevicePath="\\?\hid#hidclass#1&amp;2d595ca7&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
-      <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
-        <Events>
-          <Event BoundTo="SLIDER">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:INOP_ENGINE_LEVER_EMERGENCYPOWER" Value="0">
-                    <Options>
-                      <Option Key="USEMAPPING" Value="False" />
-                      <Option Key="USETRIGGERVALUE" Value="True" />
-                      <Option Key="MAPFROM" Value="54" />
-                      <Option Key="MAPTO" Value="100" />
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-16383" />
-                      <Option Key="RANGETO" Value="16383" />
-                      <Option Key="INVERTAXIS" Value="True" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="RX_AXIS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="SIMCONNECT:GENERAL ENG THROTTLE LEVER POSITION:1" Value="0">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="16382" />
-                      <Option Key="RANGETO" Value="-16382" />
-                      <Option Key="INVERTAXIS" Value="True" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-        </Events>
-        <Extensions />
-      </DevicePage>
-      <Events />
-      <Extensions />
-    </Device>
   </Devices>
   <Options>
     <Option Key="Saitek.BIP.EnableVirtualPower" Value="True" />
@@ -2057,9 +1936,8 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="0c737cd7-8b36-407b-b4ea-f753645722d4" Version="0.5">
-    <Author>fergatron</Author>
+  <ProfileInformation ProfileID="deae55ae-c497-4c11-bd4d-1ce488d6c101" Version="0.1">
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-05-26T18:31:29.6153189-04:00</LastChanged>
+    <LastChanged>2025-06-30T07:54:38.5479164-04:00</LastChanged>
   </ProfileInformation>
 </Profile>
