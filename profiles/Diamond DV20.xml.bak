@@ -812,6 +812,26 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="SWITCH_STROBE_LIGHTS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:LIGHT STROBE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:STROBES_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:LIGHT STROBE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:STROBES_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="SWITCH_TAXI_LIGHTS">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -935,20 +955,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_MASTER_ALT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUEON">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUEOFF">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="0" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="SWITCH_AVIONICS_MASTER">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
@@ -983,28 +989,32 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_StandbyFuelPump_L" Value="1" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_StandbyFuelPump_R" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="B:FUEL_PUMP_1" Value="1" />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFF">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_StandbyFuelPump_L" Value="0" />
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_StandbyFuelPump_R" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="B:FUEL_PUMP_1" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="SWITCH_STROBE_LIGHTS">
+          <Event BoundTo="SWITCH_MASTER_ALT">
             <EventDefinitions>
               <EventDefinition Trigger="VALUEON">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="B:ELECTRICAL_ALTERNATOR_1" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_StrobeLight_Low" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="1" />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUEOFF">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="B:ELECTRICAL_ALTERNATOR_1" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_StrobeLight_Low" Value="0" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:GENERAL ENG MASTER ALTERNATOR:1" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1660,6 +1670,22 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="QUADRANT_LEFT_REVERSE">
+            <EventDefinitions>
+              <EventDefinition Trigger="HELD">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PROP_PITCH2_SET">
+                    <Parameter Value="4294963200" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PROP_PITCH2_SET" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="YOKE_BUTTON_C2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -1732,11 +1758,26 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="QUADRANT_RIGHT_UPPER">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="B:AIRCRAFT_DOOR_WINDOW_PILOT" Value="1" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="ROLLOVER" Value="True" />
+                      <Option Key="VALUEMAX" Value="1" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="QUADRANT_RIGHT_LOWER">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_CabinDoor" Value="1" ValueOperation="Increment">
+                  <EventActionChangeValue TargetDataDefinition="B:AIRCRAFT_DOOR_WINDOW" Value="1" ValueOperation="Increment">
                     <Options>
                       <Option Key="HASMINMAX" Value="True" />
                       <Option Key="VALUEMAX" Value="1" />
@@ -1747,108 +1788,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_AXIS_LEFT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_PROPPITCH">
-                    <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION2" Value="True" />
-                      <Option Key="MIN" Value="255" />
-                      <Option Key="MAX" Value="0" />
-                    </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_AXIS_RIGHT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <Comment>START</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_2_CONDITION_LEVER" Value="1">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-5461" />
-                      <Option Key="RANGETO" Value="706" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <Comment>FUEL CUTOFF</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_2_CONDITION_LEVER" Value="2">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-16383" />
-                      <Option Key="RANGETO" Value="-8930" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <Comment>RUN</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_2_CONDITION_LEVER" Value="0">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="4176" />
-                      <Option Key="RANGETO" Value="16383" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="NAME" Value="Condition lever 2" />
-            </Options>
-          </Event>
-          <Event BoundTo="QUADRANT_AXIS_MIDDLE">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <Comment>START</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER" Value="1">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-5461" />
-                      <Option Key="RANGETO" Value="706" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <Comment>FUEL CUTOFF</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER" Value="2">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-16383" />
-                      <Option Key="RANGETO" Value="-8930" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <Comment>RUN</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER" Value="0">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="4176" />
-                      <Option Key="RANGETO" Value="16383" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="NAME" Value="Condition lever 2" />
-            </Options>
-          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1858,27 +1797,27 @@
     <Device VendorID="0x06A3" ProductID="0x0C2D" DevicePath="\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;37599f2f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="QUADRANT_AXIS_LEFT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
-                    <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION1" Value="True" />
-                      <Option Key="IDLE" Value="255" />
-                      <Option Key="MAX" Value="0" />
-                    </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="QUADRANT_LEFT_LOWER">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:PARKING_BRAKES" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_RIGHT_REVERSE">
+            <EventDefinitions>
+              <EventDefinition Trigger="HELD">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PROP_PITCH1_SET">
+                    <Parameter Value="4294963200" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PROP_PITCH1_SET" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1890,7 +1829,7 @@
                   <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
                     <Options>
                       <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION2" Value="True" />
+                      <Option Key="OPTION1" Value="True" />
                       <Option Key="IDLE" Value="255" />
                       <Option Key="MAX" Value="0" />
                     </Options>
@@ -1903,50 +1842,17 @@
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
                 <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_PROPPITCH">
+                  <EventActionCustomAxis TargetDataDefinition="B:ENGINE_PROPELLER_1" Value="0">
                     <Options>
+                      <Option Key="ALWAYSACTIVE" Value="False" />
+                      <Option Key="RANGEFROM" Value="-16383" />
+                      <Option Key="RANGETO" Value="16383" />
+                      <Option Key="USETRIGGERVALUE" Value="False" />
+                      <Option Key="USEMAPPING" Value="True" />
+                      <Option Key="MAPTO" Value="100" />
                       <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION1" Value="True" />
-                      <Option Key="MIN" Value="255" />
-                      <Option Key="MAX" Value="0" />
                     </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_LEFT_REVERSE">
-            <EventDefinitions>
-              <EventDefinition Trigger="HELD">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_1_Dec">
-                    <Parameter Value="4" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="RELEASE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_1_Inc">
-                    <Parameter Value="16" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="QUADRANT_MIDDLE_REVERSE">
-            <EventDefinitions>
-              <EventDefinition Trigger="HELD">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_2_Dec">
-                    <Parameter Value="4" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="RELEASE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_2_Inc">
-                    <Parameter Value="16" />
-                  </EventActionControl>
+                  </EventActionCustomAxis>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -2057,9 +1963,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="a24c649e-8f36-4319-a78e-e7526cbd6c73" Version="0.21">
+  <ProfileInformation ProfileID="39446da7-4022-4de2-90c5-ec104b5375fa" Version="0.3">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-08-08T13:36:52.2729096-04:00</LastChanged>
+    <LastChanged>2025-10-25T11:15:42.611417-04:00</LastChanged>
   </ProfileInformation>
 </Profile>

@@ -1766,18 +1766,6 @@
           <Event BoundTo="QUADRANT_AXIS_RIGHT">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
-                <Comment>START</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_2_CONDITION_LEVER" Value="1">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-5461" />
-                      <Option Key="RANGETO" Value="706" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
                 <Comment>FUEL CUTOFF</Comment>
                 <EventActions>
                   <EventActionCustomAxis TargetDataDefinition="B:FUEL_2_CONDITION_LEVER" Value="2">
@@ -1785,6 +1773,18 @@
                       <Option Key="ALWAYSACTIVE" Value="False" />
                       <Option Key="RANGEFROM" Value="-16383" />
                       <Option Key="RANGETO" Value="-8930" />
+                    </Options>
+                  </EventActionCustomAxis>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <Comment>START</Comment>
+                <EventActions>
+                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_2_CONDITION_LEVER" Value="1">
+                    <Options>
+                      <Option Key="ALWAYSACTIVE" Value="False" />
+                      <Option Key="RANGEFROM" Value="-5461" />
+                      <Option Key="RANGETO" Value="706" />
                     </Options>
                   </EventActionCustomAxis>
                 </EventActions>
@@ -1809,18 +1809,6 @@
           <Event BoundTo="QUADRANT_AXIS_MIDDLE">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
-                <Comment>START</Comment>
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER" Value="1">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="-5461" />
-                      <Option Key="RANGETO" Value="706" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
                 <Comment>FUEL CUTOFF</Comment>
                 <EventActions>
                   <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER" Value="2">
@@ -1828,6 +1816,18 @@
                       <Option Key="ALWAYSACTIVE" Value="False" />
                       <Option Key="RANGEFROM" Value="-16383" />
                       <Option Key="RANGETO" Value="-8930" />
+                    </Options>
+                  </EventActionCustomAxis>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <Comment>START</Comment>
+                <EventActions>
+                  <EventActionCustomAxis TargetDataDefinition="B:FUEL_1_CONDITION_LEVER" Value="1">
+                    <Options>
+                      <Option Key="ALWAYSACTIVE" Value="False" />
+                      <Option Key="RANGEFROM" Value="-5461" />
+                      <Option Key="RANGETO" Value="706" />
                     </Options>
                   </EventActionCustomAxis>
                 </EventActions>
@@ -1911,6 +1911,42 @@
                       <Option Key="MAX" Value="0" />
                     </Options>
                   </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_LEFT_REVERSE">
+            <EventDefinitions>
+              <EventDefinition Trigger="HELD">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_1_Dec">
+                    <Parameter Value="4" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_1_Inc">
+                    <Parameter Value="16" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="QUADRANT_MIDDLE_REVERSE">
+            <EventDefinitions>
+              <EventDefinition Trigger="HELD">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_2_Dec">
+                    <Parameter Value="4" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:ENGINE_THROTTLE_2_Inc">
+                    <Parameter Value="16" />
+                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -2021,9 +2057,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="a24c649e-8f36-4319-a78e-e7526cbd6c73" Version="0.18">
+  <ProfileInformation ProfileID="a24c649e-8f36-4319-a78e-e7526cbd6c73" Version="0.22">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2025-08-08T13:04:24.9668754-04:00</LastChanged>
+    <LastChanged>2025-08-08T13:38:05.0500511-04:00</LastChanged>
   </ProfileInformation>
 </Profile>
