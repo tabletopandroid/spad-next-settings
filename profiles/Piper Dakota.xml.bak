@@ -1722,26 +1722,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="QUADRANT_AXIS_RIGHT">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionCustomAxis TargetDataDefinition="B:DEICE_CARB_HEAT_Set" Value="0">
-                    <Options>
-                      <Option Key="ALWAYSACTIVE" Value="False" />
-                      <Option Key="RANGEFROM" Value="16383" />
-                      <Option Key="RANGETO" Value="4433" />
-                      <Option Key="ONETIME" Value="True" />
-                      <Option Key="USETRIGGERVALUE" Value="False" />
-                      <Option Key="INVERTAXIS" Value="False" />
-                      <Option Key="USEMAPPING" Value="False" />
-                      <Option Key="MAPFROM" Value="1" />
-                    </Options>
-                  </EventActionCustomAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -1932,9 +1912,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="deae55ae-c497-4c11-bd4d-1ce488d6c101" Version="0.7">
+  <ProfileInformation ProfileID="deae55ae-c497-4c11-bd4d-1ce488d6c101" Version="0.6">
     <Author>fergatron</Author>
     <Description>&lt;HTML&gt;&lt;BODY&gt;&lt;DIV STYLE="text-align:Left;font-family:Segoe UI;font-style:normal;font-weight:normal;font-size:13;color:#D1D1D1;"&gt;&lt;P&gt;&lt;SPAN&gt;Complete Saitek setup&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;</Description>
-    <LastChanged>2026-03-01T20:37:05.5931265-05:00</LastChanged>
+    <LastChanged>2026-03-01T20:18:21.1596817-05:00</LastChanged>
   </ProfileInformation>
 </Profile>
