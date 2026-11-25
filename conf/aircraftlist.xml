@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AircraftList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fsgs.com/SPAD">
+  <IndexVersion>1</IndexVersion>
+  <AircraftIndexInformation>
+    <AircraftIndexInformation SimulationType="MSFS24" LastIndexTime="2026-11-25T00:50:58.7237181Z" DirectoryName="C:\Users\marc\AppData\Local\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache\Packages" />
+    <AircraftIndexInformation SimulationType="MSFS24" LastIndexTime="2026-11-25T17:41:53.6315Z" DirectoryName="__INGAME__" />
+  </AircraftIndexInformation>
+  <AllAircrafts>
+    <AircraftEntry>Black Square Grand Duke N18VK<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Grand Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Grand Duke N321JF<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Grand Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Grand Duke N440CM<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Grand Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Grand Duke N339CL<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Grand Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Grand Duke N122SP<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Grand Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square B60 Duke N43DH<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square B60 Duke N28HD<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60 Duke</AircraftType><AircraftTypeRole>Twin Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square TBM 850 Feather Red<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>TBM 850</AircraftType><AircraftTypeRole>Single Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square TBM 850 Red &amp; Gold<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>TBM 850</AircraftType><AircraftTypeRole>Single Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square TBM 850 Blue Ribbons<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>TBM 850</AircraftType><AircraftTypeRole>Single Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square TBM 850 Red &amp; Silver<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>TBM 850</AircraftType><AircraftTypeRole>Single Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square TBM 850 Blue Lines<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>TBM 850</AircraftType><AircraftTypeRole>Single Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square TBM 850 Orange<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>TBM 850</AircraftType><AircraftTypeRole>Single Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Turbine Duke N6060X<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60T Turbine Duke</AircraftType><AircraftTypeRole>Twin Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Turbine Duke N3675D<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60T Turbine Duke</AircraftType><AircraftTypeRole>Twin Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Turbine Duke N323N<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60T Turbine Duke</AircraftType><AircraftTypeRole>Twin Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Turbine Duke N2830B<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60T Turbine Duke</AircraftType><AircraftTypeRole>Twin Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Turbine Duke N610DS<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60T Turbine Duke</AircraftType><AircraftTypeRole>Twin Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Black Square Turbine Duke N585K<Manufacturer>Black Square</Manufacturer><CreatedBy>Black Square</CreatedBy><AircraftType>B60T Turbine Duke</AircraftType><AircraftTypeRole>Twin Engine TurboProp</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow III D-ERMT<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow III</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow III G-OBAK<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow III</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow III HB-PMB<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow III</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow III N48427<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow III</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow III VH-LLA<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow III</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow III Custom<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow III</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow IV D-EAIV<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow IV</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow IV G-BOGM<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow IV</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow IV N3023K<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow IV</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow IV OE-KFT<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow IV</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow IV OK-MAN<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow IV</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Just Flight PA28 Turbo Arrow IV Custom<Manufacturer>Just Flight</Manufacturer><CreatedBy>Just Flight</CreatedBy><AircraftType>PA28 Turbo Arrow IV</AircraftType><AircraftTypeRole>Single Engine Prop</AircraftTypeRole><SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing NC18579<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Barons Revenge<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 05 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Commuter, Cargopod, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Diamond DA40NG Private Charter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Latecoere 631<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Dornier DoX<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Magni M24 Plus White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Combi, Cargopod, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 05<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas C-47 M5 Tow Plane<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou Camo2<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N846DS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Wheels / Passenger Cabin / GPS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Spam Can<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Gotcha<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Toto Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft Bonanza Private Charter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Yellow Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Dornier Do-31 E3 Experimental<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 03 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 42-600 Highline 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Wright Flyer<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Radial Velocity<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Smokin Hot Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 WORLD TRAVEL<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DG LS8<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Commuter, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov AN225 Xbox Aviators Club<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Floats / Passenger Cabin / Radio + ADF<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-12 NGX VIP<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers F13 Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>S12-G: Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Shock Ultra Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Microsoft Vision Jet Executive Seating<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>787-10<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers Ju52/3m Modern<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Taurus M: Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Edge540 v3 Martin Sonka<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 72-600 Highline 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Spirit of St.Louis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Crop Dust<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Gee Bee Z Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DG-1001-E Neo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov AN225 Antonov Airlines Blue Line Livery (2008-2009)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N2158C<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Bunny<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Gunslinger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Sarance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>NXCub Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C208B Medic<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-24 VIP<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas C-47 M5 Lead<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C185F Skywagon Fairing<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boeing 747-400 LCF Dreamlifter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza N828L<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 METAL LEFT<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Blue Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 04<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Baby Boomer<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>HU-16 SAR<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C185F Skywagon Ski<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas C-47 USN159<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N683CB<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boom XB-1 [Preset Default]<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C400 Corvalis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Undecided<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive American Spirit<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Wheels / Passenger Cabin / Radios<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Reno<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Diamond DA40NG<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Wheels / Cargo / Radios<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N354MP<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A320neo V2<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Gee Bee R2 Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers F13 Vintage<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Almost Perfect<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIa/3m Skis - Josephine Ford<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Nice And Ez Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 07<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Black Hawk Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 DUSTY<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza G-BSVH<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Goldfinger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak Commuter Amphibian<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov AN225 Blank White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>MXS-R<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza N829K<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 72-600 Highline 04<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Flight Design CT<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza N9609T<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIa/3m Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae45 - OK-FHA<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>XCub Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Aviation Savage Cub<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C185F Skywagon Tundra<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Mitsubishi MU2-2B Executive Black<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Amphibian Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Blue Ice<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Mitsubishi MU2-2B Executive White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Panther Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing NC353E<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Skydive, Cargopod<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP IFD Passengers Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beech Baron G58 Private Charter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Savage Norden: Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Virus SW Pipistrel<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Edge540 v3 Bullet<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 42-600 Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing N25BS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 01_Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIb/3m Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Robin DR400<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo 04<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 Aviators Club modern<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov Airlines 'Be Brave Like Ukraine' Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Voodoo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Athena<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 72-600 Freighter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft Bonanza<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Floats / Cargo / Radios<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae45 - Prototype<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aviat Pitts S2<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>G-111 Albatross G3X<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pilatus PC-6 G950 Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Summit, Cargopod, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 06 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Diamond DA40TDI Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive The Yellow Bomber Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 42-600 Highline 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker Replica Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-12 NGX Air Ambulance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Strega<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A10C Thunderbolt II<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Lady B<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C152 Aerobat<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Panther Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Powrachute Sky Rascal<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Skydive) Clown Fish Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Skydive) White Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing NC4135<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Floats / Passenger Cabin / Radios<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C152 Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Skydive) Pink Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>L-39 Albatros<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boeing Stratoliner<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-6-300 Twin Otter Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C188 Agtruck AerialApp<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Radial Velocity<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIa/3m<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Combi Amphibian<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Smokin Hot Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C152<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou Blue with Red Stripe<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N99ST<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Gee Bee R2 NR2101<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Focke Wulf FW-200 Condor (Passenger)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>CGS Hawk Arrow II<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 04<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C208B Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>G-111 Albatross<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pilatus PC-6 Gauge Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Skydive, Cargopod, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 08<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Extra 330 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers F13 Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov AN225 Antonov Airlines Modern Livery (2010-2022)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Six Cat<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Athena<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 02 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Livery Default<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 05<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17 Imperial Ethiopian Air Force (319)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 Aviators XBOX Club<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Gee Bee R2 Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Savoia S55X<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing N115H<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae45 - PLAINWHITE<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Pink Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boeing 747 Supertanker<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Big Red<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers Ju52/3m 1939<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 04 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Optica: Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Gee Bee Z Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Red Thunder<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Shock Ultra Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N45LM2<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing N52EEZ<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Jumpers Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C-17A Military Airlift<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza N295K<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Tango Tango Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F.VIIa/1m Single-engined<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Jetson One [Preset Default]<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Second Hand Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Wheels / Passenger Cabin / Radio + ADF<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A310<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Gotcha<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 07 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Black Hawk Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Savage Norden: Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>MXS-R Race<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ES30 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers F13 Modern<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Edge540 v3 Matt Hall<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-300P2F (GE)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C152 Aerobat Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae145 - SP-LXH<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17 Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N83KT<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C208B Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Man O War<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers Ju52/3m Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Shock Ultra<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 06<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Space Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Curtiss C46 Commando Modern<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-300P2F (RR)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Edge540 v3 Kirby Chambliss<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>NXCub<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S C-GJMC<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Shock Ultra Rescue<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Tumbling Goose<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>AT802 Aerial Application Sprayer<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Ford Trimotor Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Cargo, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Passengers Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 42-600 Stol<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Volocity Microsoft<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>FA18E SuperHornet<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17 Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Blue Ice<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Wheels / Cargo / GPS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-300 VIP (GE)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S Navy<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae145 - Red-Cream<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Skyship600 Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-300 VIP (RR)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>XCub Passengers Big Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Eros<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo 05<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 02 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Diamond DV20 Private<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Red &amp; Blue Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 EMERALD HARBOR<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing N65268<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza G-BGGH<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Miss America<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive American Patriot<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros VSpeed Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Skydive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Dornier DoJ Plus Ultra<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Focke Wulf FW-200 Condor (Metal)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Wee Willy II<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N45LM2<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boeing B707 UNS1<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C208B Skydive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna Citation CJ4<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Bunny<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 04 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 06<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Curtiss JN-4 Jenny<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Almost Perfect<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N438Y<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza N96652<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Second Hand Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP Classic Passengers Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Tango Tango Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Robin CAP10<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Strega<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Diamond DV20<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Lady B<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-200 (RR)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIb/3m Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Surveyor) White Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP Classic Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Mrs Virginia<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Edge540 v2<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Junkers Ju52/3m Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Robin1<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>King Air C90 GTX Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza N298P<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Miss Diane Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP Classic Passengers Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Optica: Scientific Research<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 07<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Hercules H-4<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-200 (GE)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Orange Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Passengers Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>404 Titan Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Grumman Goose G21A<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou Blue with White and Red<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP IFD Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Firefight Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP IFD Skydive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Ford Trimotor Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Mitsubishi MU2-2B Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 72-600 Highline 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>JMB Aviation VL3<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Gee Bee Z NR77V<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Cargo, CargoPod, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>XCub Passengers Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>737 Max 8 BBJ<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Ford Trimotor Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov AN225 Aviators Club<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft V35B Bonanza White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Seastar<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17 Finnish Air Force (SH-1)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-200 VIP (GE)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>XCub Passengers Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Wee Willy II<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N654ER<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>404 Titan Cargo - Empty<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-24 Cargo - Empty<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Tumbling Goose<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Combi, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>HU16 Albatross Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP Classic Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-200 VIP (RR)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Savoia S55X 1933<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>747-8F<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Miss America<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C208B Floats Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-12NGX Cargo - Empty<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A320neo V2 VIP<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Combi<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 08<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Floats / Cargo / GPS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 RED YELLOW<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Floats / Cargo / Radio + ADF<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno_Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing NC1413<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Drop Bear<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>XCub Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-6-300 Twin Otter Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Pipsqueak<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Surveyor) Red Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Shock Ultra Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Barons Revenge<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP IFD Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Microsoft Vision Jet Family Seating<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Draco X: Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Joby [Preset Default]<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DA62 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N195WE<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cirrus SR22T<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Mitsubishi MU2-2B<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Cargo Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIb/3m Floats Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Mrs Virginia<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 Metal - classic<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Piper PA28-236 Dakota - Standard<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 05<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 72-600 Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo TBM 930 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving 04<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 07 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>mg hjet ha420 [Preset Default]<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beech Baron G58<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Military) Green Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Red Thunder<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Aviation Savage Cub Aerial Advertising<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>AT802 Firefighting<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Firefight Amphibious<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Racer X Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft King Air<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Savoia S55<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 01 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17S Staggerwing NC2377<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 07<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>404 Titan Air Ambulance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C408 SkyCourier Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Focke Wulf FW-200 Condor (Passenger Red)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-24 Air Ambulance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae145 - PLAINWHITE<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Gunslinger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Combi, Cargopod<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>340 Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno The Yellow Bomber Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Cargo, CargoPod<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-6-300 Twin Otter Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno ClayLacy<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>XCub Passengers Red Bull Sopot<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Zlin Aviation Savage Cub Rescue<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP IFD Passengers Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Eros<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Passengers Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Nice And Ez Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Cargo 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Summit, Cargopod<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP IFD Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>747-8i<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Savage Norden: Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Racer X Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou Blue with Yellow Stripe<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP Classic Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17 Swedish Air Force (17396)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Diamond DA40TDI Private Charter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Draco X: Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Undecided<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Summit, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 42-600 Highline 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Livery 05 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Dornier DoJ N25 (Amundsen Wal)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-300 (GE)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak Summit Amphibian<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-300 (RR)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 WHITE - classic<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>340 Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Baby Boomer<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>ATR 72-600 Highline 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Summit<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Miss Diane Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N784RA<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Tow<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Icon A5<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pilatus PC-6 G950 Wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>CL415 Firefighting<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae145 - SilverGold<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Dornier DoJ Cabina<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) White Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 01<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Sarance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>PC-12 NGX Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 03 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Passengers Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>King Air C90 GTX Air Ambulance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N3056C<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna C195 Businessliner N9654H<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov AN225 Antonov Airlines Red Line Livery (2006-2008)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP Classic Skydive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A330-BelugaXL<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Microsoft Vision Jet Complete Seating<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Goldfinger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-4 Caribou Camo1<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Spam Can<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>737 Max 8 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 06<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Midnight<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A400M Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N85ET<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving White<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Jumpers Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Pipsqueak<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Microsoft-CGA4<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker Replica Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Passive Drop Bear<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Military) Green Camo Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pilatus PC-6 Gauge Skis<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boeing B707 INS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II 02<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 BLUE STRIPE<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aviat Pitts S1<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Man O War<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A321<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D17 Staggerwing Xbox Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S N522B<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Antonov An-2 Jumpers Wheels GPS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Goodyear Blimp<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Wheels / Cargo / Radio + ADF<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 06 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Fokker F-VIIb/3m - Cargo Transport<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Dornier Do-31 E1 Experimental<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DA62 Scientific Research<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Airliner) Grey &amp; Blue Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Commuter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C172SP G1000 Skydive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Reno Livery 08 Passive<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Short SC.7 Skyvan (Military) Grey Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Curtiss C46 Commando Military<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Virus SW Pipistrel Private Charter<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Mitsubishi MU2-2B Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Commuter, Cargopod<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Kodiak 100 Skydive, Tundra wheels<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros American Patriot<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>CAP-4<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C408 SkyCourier Cargo - Empty<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C185F Skywagon Standard<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Beechcraft D18S Aviators Club Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>SAAB B17 Swedish Air Force (17342)<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae45 - Polished<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>DHC-2 Beaver Floats / Passenger Cabin / GPS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Asobo Reno Big Red<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C185F Skywagon Amphibious<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros Robin1<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Boeing B707 GNS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas C-47 M5<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 03<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>P51-D Mustang Asobo Reno Passive Voodoo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Passive Toto Asobo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Aero Ae145 - OM-NHS<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Piper PA28-236 Dakota - Fairings<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Pitts Special S1 Reno Asobo Passive Livery 08<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Cessna Citation Longitude Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>C208B Scientific<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Asobo Aero L-39 Albatros American Spirit<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Douglas DC-3 DCDIRECT<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cessna T207A Stationair 8 II Skydiving 05<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Six Cat<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>North American T-6 Texan Passive Asobo Reno Livery 04<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>BELL UH-1H Iroquois Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>R66 Turbine Spray System<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Westland Scout Grey Green Camo Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>BELL UH-1H Iroquois Rescue Hoist<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Eurocopter EC-135T1 Sightseeing<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H125 Rescue<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>S-64F Skycrane Firefighting Configuration<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Bell 47J Ranger Floats<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Eurocopter EC-135T1 Search and Rescue<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H225 Civilian<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>CH-47D Chinook Lifting Configuration<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Bell 47J Ranger Skids<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>CH-47D Chinook Default Configuration<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Westland Scout Grey Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H125 Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>CH-47D Chinook Passenger Configuration<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Westland Wasp Grey Camo Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H225 Flightseeing<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Bell 407<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H225 Search &amp; Rescue<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Westland Wasp Grey Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H225 Cargo<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Westland Scout Black Green Camo Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Eurocopter EC-135T1 Ambulance<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H125 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Westland Wasp Blue Livery<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>R66 Turbine Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>S-64F Skycrane Default Configuration<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Eurocopter EC-135T1 Passenger<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H125 AerialApp<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>Cabri G2 Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>S-64F Skycrane Lifting Configuration<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>H125 Rescue No Hoist<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>HotAirBalloon Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>FlyDoo Passengers<SimTypes>MSFS24</SimTypes></AircraftEntry>
+    <AircraftEntry>A2A Piper PA-24-250 Comanche<SimTypes>MSFS24</SimTypes></AircraftEntry>
+  </AllAircrafts>
+</AircraftList>

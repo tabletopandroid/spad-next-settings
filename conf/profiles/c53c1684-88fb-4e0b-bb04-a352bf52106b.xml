@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalProfileInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ProfileID="c53c1684-88fb-4e0b-bb04-a352bf52106b">
+  <Mapping>
+    <LocalDeviceMapping DeviceProfileID="06A3:0D05:0" DeviceLocalID="06A3:0D05:0" />
+    <LocalDeviceMapping DeviceProfileID="06A3:0D06:0" DeviceLocalID="06A3:0D06:0" />
+    <LocalDeviceMapping DeviceProfileID="06A3:0D67:0" DeviceLocalID="06A3:0D67:0" />
+    <LocalDeviceMapping DeviceProfileID="06A3:0BAC:0" DeviceLocalID="06A3:0BAC:0" />
+    <LocalDeviceMapping DeviceProfileID="06A3:0C2D:0" DeviceLocalID="06A3:0C2D:0" />
+    <LocalDeviceMapping DeviceProfileID="06A3:0763:0" DeviceLocalID="06A3:0763:0" />
+  </Mapping>
+</LocalProfileInformation>

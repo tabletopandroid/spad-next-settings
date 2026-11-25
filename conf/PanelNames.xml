@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PanelNames xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0d05#9&amp;7afbcdc&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Radio Panel</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0D05</ProductIndex>
+    <SortOrder>0</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>cc5624d0-e83e-11f1-8004-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0d06#9&amp;3028cf7a&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Multi Panel</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0D06</ProductIndex>
+    <SortOrder>0</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>c9a6bc40-e83e-11f1-8003-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0d67#9&amp;3842c591&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Pro Switch Panel</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0D67</ProductIndex>
+    <SortOrder>0</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>ceb52370-e83e-11f1-8005-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0bac#a&amp;332e54f3&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Pro Yoke</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0BAC</ProductIndex>
+    <SortOrder>0</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>c7412df0-e83e-11f1-8001-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0c2d#a&amp;37599f2f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Pro Quadrant (USB)</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0C2D</ProductIndex>
+    <SortOrder>0</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>c7412df0-e83e-11f1-8002-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0763#9&amp;4b32b63&amp;1&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Saitek Pro Flight Rudder Pedals</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0763</ProductIndex>
+    <SortOrder>0</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>891e19e0-e3f5-11f1-8005-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>\\?\hid#vid_06a3&amp;pid_0bac#a&amp;332e54f3&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}</Key>
+    <Name>Quadrant (Yoke)</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>06A3:0BAC</ProductIndex>
+    <SortOrder>50</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>1</SubDeviceIndex>
+    <InstanceID>c7412df0-e83e-11f1-8001-444553540000</InstanceID>
+  </Panel>
+  <Panel>
+    <Key>0xFFFF_0xFFFF</Key>
+    <Name>Script Panel</Name>
+    <VariableIndex>0</VariableIndex>
+    <ProductIndex>FFFF:FFFF</ProductIndex>
+    <SortOrder>100</SortOrder>
+    <DeviceEventIndex>0</DeviceEventIndex>
+    <SubDeviceIndex>0</SubDeviceIndex>
+    <InstanceID>00000000-0000-0000-0000-000000000000</InstanceID>
+  </Panel>
+</PanelNames>
