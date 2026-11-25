@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AircraftAssignments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Simulation="MSFS24" xmlns="http://www.fsgs.com/SPAD">
+  <AircraftAssignment>
+    <Key>C172SP Classic Aerial Advertising</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP Classic Cargo</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP Classic Passengers</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP Classic Passengers Floats</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP Classic Passengers Skis</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP Classic Skydive</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Aerial Advertising</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Cargo</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Passengers</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Passengers Floats</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Passengers Skis</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Skydive</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP G1000 Tow</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP IFD Aerial Advertising</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP IFD Cargo</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP IFD Passengers</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP IFD Passengers Floats</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP IFD Passengers Skis</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>C172SP IFD Skydive</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>Cessna C152</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>Cessna C152 Aerial Advertising</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>Cessna C152 Aerobat</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+  <AircraftAssignment>
+    <Key>Cessna C152 Aerobat Aerial Advertising</Key>
+    <Profile>Cessna 152-172.xml</Profile>
+  </AircraftAssignment>
+</AircraftAssignments>
